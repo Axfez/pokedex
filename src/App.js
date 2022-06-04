@@ -1,24 +1,31 @@
-import logo from './logo.svg';
+import Box from '@mui/material/Box'
 import './App.css';
+import { Pill, Card, Searchbar } from './components'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Box sx={{
+      marginTop: '184px',
+      mx: '13px',
+      width: '364px',
+      height: 'auto',
+    }}>
+      <Searchbar />
+      <Card>
+        <Box sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          backgroundColor: '#000000',
+          position: 'fixed',
+          width: '41px',
+          height: '31px',
+          marginLeft: '10px',
+          marginTop: '39px',
+        }}>
+          <Pill />
+        </Box>
+      </Card>
+    </Box>
   );
 }
 
