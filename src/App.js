@@ -1,3 +1,4 @@
+import { Button, Typography } from '@mui/material';
 import Box from '@mui/material/Box'
 import './App.css';
 import { Pill, Card, Searchbar } from './components'
@@ -5,26 +6,49 @@ import { Pill, Card, Searchbar } from './components'
 function App() {
   return (
     <Box sx={{
-      marginTop: '184px',
-      mx: '13px',
-      width: '364px',
+      display: 'flex',
+      position: 'absolute',
+      my: '100px',
+      mx: '130px',
+      padding: ('0px 13px 0px 13px'),
+      flexDirection: 'column',
+      width: '390px',
       height: 'auto',
+      backgroundColor: 'darkgrey',
     }}>
-      <Searchbar />
-      <Card>
-        <Box sx={{
-          display: 'flex',
-          flexDirection: 'column',
-          backgroundColor: '#000000',
-          position: 'fixed',
-          width: '41px',
-          height: '31px',
-          marginLeft: '10px',
-          marginTop: '39px',
-        }}>
-          <Pill />
-        </Box>
-      </Card>
+      <Typography variant="h3" sx={{
+        marginTop: '14px',
+        marginRight: '218px',
+      }}>
+        Pokedex
+      </Typography>
+
+      <Box sx={{
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'flex-start',
+        marginTop: '20px',
+        width: '364px',
+        padding: '0px',
+        gap: '15px',
+      }}>
+        <Searchbar />
+        <Button>ASD</Button>
+      </Box>
+
+      <Box sx={{
+        display: 'Grid',
+        gridTemplateColumns: 'repeat(2, 1fr)',
+        justifyContent: 'start',
+
+        width: '364px',
+        padding: '0px',
+        gap: '10px',
+      }}>
+        <Card />
+        <Card />
+      </Box>
     </Box>
   );
 }

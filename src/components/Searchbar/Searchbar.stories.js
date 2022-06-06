@@ -1,6 +1,5 @@
 import Searchbar from "./Searchbar"
 
-
 export default {
     title: 'Searchbar',
     component: 'Searchbar'

@@ -1,38 +1,40 @@
 import SearchIcon from '@mui/icons-material/Search'
 import InputBase from '@mui/material/InputBase'
-import { styled, alpha } from '@mui/material/styles'
+import { styled } from '@mui/material/styles'
 
-const Search = styled('div')(({ theme }) => ({
+const Search = styled('div')({
     position: 'relative',
-    borderRadius: (theme.shape.borderRadius, 100),
-    backgroundColor: alpha(theme.palette.common.white, 0.15),
+    borderRadius: '100px',
+    backgroundColor: 'white',
+    width: '311px',
+    opacity: 0.20,
+    marginBottom: '10px',
     '&:hover': {
-        backgroundColor: alpha(theme.palette.common.white, 0.25),
+        backgroundColor: 'white',
+        opacity: 0.30,
     },
-    marginLeft: 0,
-    width: '275.62px',
-}));
+});
 
-const SearchIconWrapper = styled('div')(({ theme }) => ({
-    padding: theme.spacing(0, 30),
+const SearchIconWrapper = styled('div')({
+    margin: ('0px 255px'),
     height: '100%',
     position: 'absolute',
     pointerEvents: 'fill',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-}));
+});
 
-const StyledInputBase = styled(InputBase)(({ theme }) => ({
+const StyledInputBase = styled(InputBase)({
     color: 'inherit',
     '& .MuiInputBase-input': {
-        padding: theme.spacing(1, 1, 1, 0),
-        paddingLeft: `calc(1em + ${theme.spacing(2)})`,
-        width: 'auto',
+        padding: ('8px, 8px, 8px, 0px'),
+        paddingLeft: `calc(1em + 1px)})`,
+        width: '100%'
     },
-}));
+});
 
-const Searchbar = ({ placeholder }) => {
+const Searchbar = () => {
     return (
         <Search>
             <SearchIconWrapper>
@@ -46,9 +48,6 @@ const Searchbar = ({ placeholder }) => {
     )
 }
 
-Searchbar.defaultTypes = {
-    placeholder: '...'
-}
 
 
 export default Searchbar;

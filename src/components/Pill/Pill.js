@@ -6,13 +6,14 @@ const Pill = ({ content, type }) => {
         <Box
             sx={{
                 display: 'flex',
+                position: 'absolute',
                 justifyContent: 'center',
                 alignItems: 'center',
                 flexDirection: 'row',
                 padding: '1px 8px',
                 width: '38px',
                 height: '13px',
-                border: '10px solid transparent',
+                border: '1px solid transparent',
                 color: '#FFFFFF',
                 backgroundColor: 'rgb(0, 0, 0, 0.2)',
                 borderRadius: '100px'
