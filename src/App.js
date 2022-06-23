@@ -28,10 +28,6 @@ function App() {
   }
 
   useEffect(() => {
-    fetchPokemons()
-  }, [])
-
-  useEffect(() => {
     if (!search) {
       fetchPokemons()
     }
@@ -86,9 +82,9 @@ function App() {
           Pokemon not found
         </Typography>) :
         (<Pokemonload
-          pokemons={pokemons} 
+          pokemons={pokemons}
           loading={loading}
-          />
+        />
         )}
 
 
