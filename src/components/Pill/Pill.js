@@ -1,12 +1,13 @@
 import PropTypes from 'prop-types'
 import Box from '@mui/material/Box'
 
-const Pill = ({ content, type }) => {
+const Pill = (props) => {
+    const { type } = props
     return (
         <Box
             sx={{
                 display: 'flex',
-                position: 'absolute',
+                position: 'relative',
                 justifyContent: 'center',
                 alignItems: 'center',
                 flexDirection: 'row',
@@ -15,20 +16,23 @@ const Pill = ({ content, type }) => {
                 height: '13px',
                 border: '1px solid transparent',
                 color: '#FFFFFF',
-                backgroundColor: 'rgb(0, 0, 0, 0.2)',
-                borderRadius: '100px'
+                backgroundColor: 'rgb(0, 0, 0, 0.27)',
+                borderRadius: '100px',
+                boxSizing: 'border-box',
+                fontSize: '8px',
+                fontWeight: '700',
             }}
         >
-            {content}
+            {type}
         </Box>
     )
 }
 
 Pill.propTypes = {
-    content: PropTypes.string.isRequired
+    type: PropTypes.string.isRequired
 }
 Pill.defaultTypes = {
-    content: '...'
+    type: '...'
 }
 
 export default Pill;
